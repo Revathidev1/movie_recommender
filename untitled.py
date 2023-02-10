@@ -25,6 +25,9 @@ df_tags = pd.read_csv(r'tags.csv')
 
 df_ratings
 
+# To prepare requirements.txt file
+print('\n'.join(f'{m.__name__}=={m.__version__}' for m in globals().values() if getattr(m, '__version__', None)))
+
 
 df_ratings.info()
 
